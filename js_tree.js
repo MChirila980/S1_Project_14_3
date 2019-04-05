@@ -102,13 +102,13 @@ function makeBranches(treeNode, nestedList) {
                   spanElem.setAttribute("class", "whiteSpaceNode");
                   spanElem.innerText += "#text";
             }
-//false white space
+            //false white space
             if (isWhiteSpaceNode(textString) === false) {
                   spanElem.setAttribute("class", "textNode");
                   console.log(textString);
                   spanElem.innerText += textString.value;
             }
-//new list
+            //new list
             if (treeNode.childNodes.value > 0) {
                   var newList = document.createElement("ol");
                   newList.innerText = "|";
@@ -121,6 +121,6 @@ function makeBranches(treeNode, nestedList) {
       }
 }
 
-function isWhiteSpaceNode(tString) {
+            function isWhiteSpaceNode(tString) {
       return !(/[^\t\n\r ]/.test(tString));
 }
