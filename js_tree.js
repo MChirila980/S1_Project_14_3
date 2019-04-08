@@ -39,11 +39,15 @@
 
 //this is creating the global variables
 var nodeCount = 0;
+
 var elementCount = 0;
+
 var textCount = 0;
+
 var wsCount = 0;
 
 window.addEventListener("load", makeTree);
+
 //making the tree
 function makeTree() {
 
@@ -102,12 +106,14 @@ function makeBranches(treeNode, nestedList) {
                   spanElem.setAttribute("class", "whiteSpaceNode");
                   spanElem.innerText += "#text";
             }
+
             //false white space
             if (isWhiteSpaceNode(textString) === false) {
                   spanElem.setAttribute("class", "textNode");
                   console.log(textString);
                   spanElem.innerText += textString.value;
             }
+            
             //new list
             if (treeNode.childNodes.value > 0) {
                   var newList = document.createElement("ol");
